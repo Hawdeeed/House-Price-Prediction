@@ -13,8 +13,8 @@ stages:
       size: 329
     - path: train.py
       hash: md5
-      md5: ed6457b38c32befd5ae6ff0bed80c513
-      size: 2177
+      md5: fb7524432adb46e080cb182bceb3bd95
+      size: 2239
     params:
       params.yaml:
         model.fit_intercept: true

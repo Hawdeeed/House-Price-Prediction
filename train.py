@@ -70,7 +70,9 @@ metrics = {"mae": mae, "mse": mse, "r2": r2}
 with open("metrics.json", "w") as f:
     json.dump(metrics, f, indent=4)
 
-# Save trained model
+# Save model
 joblib.dump(model, "models/model.joblib")
 
-print("✅ Training complete. Model and metrics saved successfully.")
+# Save model columns
+joblib.dump(X.columns.tolist(), "models/model_columns.joblib")
+print("✅ Training complete. Model and metrics saved.")
