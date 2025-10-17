@@ -1,0 +1,32 @@
+schema: '2.0'
+stages:
+  train:
+    cmd: python train.py
+    deps:
+    - path: data/pakistan_house_prices.csv
+      hash: md5
+      md5: 862ce971c086da8903e8ecc7c8a52c92
+      size: 49522076
+    - path: params.yaml
+      hash: md5
+      md5: 49ce6d8a20533ced81f09439cb4c1ad8
+      size: 329
+    - path: train.py
+      hash: md5
+      md5: ed6457b38c32befd5ae6ff0bed80c513
+      size: 2177
+    params:
+      params.yaml:
+        model.fit_intercept: true
+        model.type: LinearRegression
+        random_state: 42
+        test_size: 0.2
+    outs:
+    - path: metrics.json
+      hash: md5
+      md5: 77f6f9873a264e3567be32be259b6e6b
+      size: 99
+    - path: models/model.joblib
+      hash: md5
+      md5: 03809938063382cda750b19b171bbd29
+      size: 1008

@@ -1,0 +1,4 @@
+[core]
+    remote = myremote
+['remote "myremote"']
+    url = E:\MY UNIVERSITY WORK\MLops\dvc_storage

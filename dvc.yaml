@@ -1,0 +1,17 @@
+stages:
+  train:
+    cmd: python train.py
+    deps:
+      - train.py
+      - data/pakistan_house_prices.csv
+      - params.yaml
+    params:
+      - random_state
+      - test_size
+      - model.type
+      - model.fit_intercept
+    outs:
+      - models/model.joblib
+    metrics:
+      - metrics.json:
+          cache: false

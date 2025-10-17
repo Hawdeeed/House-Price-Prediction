@@ -15,4 +15,4 @@ random_forest:
 data:
   path: data/pakistan_house_prices.csv
   target: price
-  features: [area, bedrooms, bathrooms, location, city]
+  features: [area, bedrooms, baths, city]
