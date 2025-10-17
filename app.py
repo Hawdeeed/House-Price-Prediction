@@ -45,9 +45,5 @@ def predict():
     except Exception as e:
         return jsonify({"error": str(e)})
 
-@app.route("/login")
-def login():
-    return "🧍‍♂️ This is the login page — added by Student 1"
-
 if __name__ == "__main__":
     app.run(debug=True)
