@@ -45,5 +45,12 @@ def predict():
     except Exception as e:
         return jsonify({"error": str(e)})
 
+@app.route("/login")
+def login():
+    return "Login page for users"
+
+@app.route("/dashboard")
+def dashboard():
+    return "Dashboard page for users"
 if __name__ == "__main__":
     app.run(debug=True)
